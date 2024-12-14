@@ -1,0 +1,45 @@
+public class BookShelf extends Furniture {
+	
+	int noOfShelves;
+
+	public BookShelf() {
+		super();
+	}
+
+	public BookShelf(int noOfShelves) {
+		super();
+		this.noOfShelves = noOfShelves;
+	}
+	
+	public void acceptBookShelfDetails()
+	{
+	/*	System.out.println("Enter the Length ");
+		length = scan.nextInt();
+		System.out.println("Enter the Width ");
+		width = scan.nextInt();
+		System.out.println("Enter the Height");
+		height = scan.nextInt();*/
+		super.acceptFurnitureDetails();
+		System.out.println("Enter No of Shelves");
+		noOfShelves = scan.nextInt();
+	}
+	public void displayBookShelfDetails()
+	{
+		System.out.println("The BookShelf Details are");
+		/*System.out.println("The Length is "+length);
+		System.out.println("The Width is "+width);
+		System.out.println("The Height is "+height);*/
+		super.displayFurnitureDetails();
+		System.out.println("Book SHelf has "+noOfShelves);
+	}
+	
+	public static void main(String[] args)
+	{
+		BookShelf shelf1 = new BookShelf();
+		shelf1.acceptBookShelfDetails();
+		shelf1.displayBookShelfDetails();
+	}
+
+}
+
+
